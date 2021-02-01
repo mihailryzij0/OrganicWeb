@@ -1,6 +1,7 @@
 .header{
     max-width: 1440px;
     margin: 0 auto;
+    padding-top: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,10 +14,35 @@
         text-decoration: none;
         color:$gray;
         transition: 0.3s ease;
+        font-weight: 500;
         &:hover{
             color:$orange;
         }
 }   }
+.header-cart{
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 82px;
+    &__button{
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color:$orange;
+        border: none;
+        border-radius: 100%;
+        background-image: url(../../../img/cart.svg);
+        background-size: 1rem 0.87rem;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    &__count{
+        position: absolute;
+        top: 6px;
+        right: 9px;
+        font-size: 0.5rem;
+        color: white;
+    }
+}
 .logo{
     background-image: url(../../../img/logo.svg);
     display: block;
