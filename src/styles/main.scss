@@ -49,6 +49,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
     &-text{
         flex: 0 0 40%;
         &__description{
@@ -57,6 +58,21 @@ body{
             margin-top: 60px;
             margin-bottom: 77px;
 
+        }
+    }
+    &-visual{
+        border: solid 1px rgba($gray, $alpha);
+        border-radius: 100%;
+        margin-bottom: 22px;
+        padding: 53px;
+        &__image{
+            border-radius: 100%;
+            border: solid 1px rgba($gray, $alpha);
+            padding: 21px;
+            img{
+                border-radius: 100%;
+                box-shadow: 15px 48px 42px 0px rgba($gray, $alpha);
+            }
         }
     }
 }
