@@ -37,7 +37,9 @@
 .box-footer-list{
     font-size: 1.12rem;
     list-style-type: none;
-    
+    @media (max-width:440px){
+        font-size: 0.85rem;
+    }
     &__item{
        color: $gray ; 
        margin-bottom: 1.62rem;
