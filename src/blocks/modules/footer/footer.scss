@@ -6,30 +6,61 @@
     .logo{
         width: 179px;
         height: 48px;
+        @media (max-width:990px) {
+            margin: 0 auto 40px;
+             
+         }
     }
 }
 .box-footer{
     display: flex;
     justify-content: space-between;
+    @media (max-width:990px) {
+        flex-direction: column;
+         
+     }
     &-item{
         display: flex;
         justify-content: space-between;
         flex: 0 0 66.4%;
+        @media (max-width: 1200px) {
+            flex: 0 0 76%;
+    
+        }        
+        @media (max-width:990px) {
+           flex-direction: column;
+            
+        }
+     
     }
 }
 .box-footer-list{
     font-size: 1.12rem;
     list-style-type: none;
+    
     &__item{
        color: $gray ; 
        margin-bottom: 1.62rem;
+       @media (max-width:990px) {
+        margin-bottom: 1.2rem;
+
+        }
+    }
+    &__mobile{
+        @media (max-width:990px){
+            display: flex;
+            justify-content: space-between;
+            max-width: 433px;
+            margin: 0 auto;
+        }
     }
     &__link{
-        text-decoration: none;
+        text-decoration: none !important;
         color: $gray ; 
         transition: 0.2s ease;
         &:hover{
-            color: $orange;
+            color: $orange !important;
+            text-decoration: none !important;
         }
     }
     &__phone{
@@ -44,6 +75,10 @@
     align-items: center;
     list-style-type: none;
     margin-top: 27px;
+        @media (max-width:990px) {
+            justify-content: center;
+        
+         }
     &__item{
         
     }
@@ -71,6 +106,12 @@
        &__inst{
            background-image: url(../../../img/instagram.svg);
            background-size: 21px 22px;
+           
+            @media (max-width:990px) {
+                margin-left: 20px;
+                margin-right: 20px;
+                 
+             }
        }
        &__fb{
             background-image: url(./../../../img/facebook.svg);
@@ -85,6 +126,9 @@
     justify-content: space-between;
     margin-top: 41px;
     color: rgba($gray ,$alpha) ; 
+    @media (max-width:990px){
+        display: block;
+    }
     &__text{
         color: #a6a8a4;
     }
