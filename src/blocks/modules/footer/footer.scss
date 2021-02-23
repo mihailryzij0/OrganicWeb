@@ -1,6 +1,6 @@
 .footer{
    padding-top: 77px; 
-    border-top: 1px solid $gray;
+    border-top: 1px solid rgba($gray ,$alpha);
     padding-bottom: 20px;
 
     .logo{
@@ -55,6 +55,12 @@
             max-width: 433px;
             margin: 0 auto;
         }
+        @media (max-width:440px){
+           min-width: 287px;
+        }
+        @media (max-width:440px){
+            justify-content: space-around;
+         }
     }
     &__link{
         text-decoration: none !important;
