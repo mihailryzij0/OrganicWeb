@@ -129,22 +129,3 @@
        }
     
 }
-.box-copyright{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 41px;
-    color: rgba($gray ,$alpha) ; 
-    @media (max-width:990px){
-        display: block;
-    }
-    &__text{
-        color: #a6a8a4;
-    }
-    &__link{
-        color: rgba($gray ,$alpha) ;
-        text-decoration: none;
-        &:hover{
-            color: $gray;
-        }
-    }
-}
