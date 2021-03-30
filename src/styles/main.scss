@@ -36,6 +36,9 @@ body{
 
 
 }
+button:active, button:focus {
+    outline: none !important;
+  }
 .btn{
     background-color: $orange;
     color: $white;
@@ -434,8 +437,11 @@ padding-bottom: 160px;
                 transform: translate(-50%, -50%);
                 object-fit: cover;
                 @media (max-width:440px) {
-                max-height: 192px;
-                top: 60%;
+                    max-height: 144px;
+                    top: 60%;
+                }
+                @media (max-width:330px) {
+                    max-height: 121px;
                 }
             }
             @media (min-width:811px) {
@@ -484,6 +490,9 @@ padding-bottom: 160px;
         }
         @media (max-width: 440px){
             left: calc(50% - 92px);
+        }
+        @media (max-width: 330px){
+            left: calc(50% - 53px);
         }
         
     
@@ -722,6 +731,9 @@ padding-bottom: 160px;
     background-position: center;
     background-repeat: no-repeat;
     padding-bottom: 180px;
+    @media (max-width:330px) {
+        padding-bottom: 100px;
+    }
     .title{
         @media (max-width:990px) {
             text-align: center;
@@ -809,8 +821,8 @@ padding-bottom: 160px;
                 top: 60%;
             }
             @media (max-width:440px) {
-                max-height: 181px;
-                top: 48%;
+                max-height: 120px;
+                top: 63%;
             }
         }
     }
@@ -821,6 +833,7 @@ padding-bottom: 160px;
           
           @media (max-width:440px){
               bottom: 30px;
+              left: calc(50% - 111px);
           }
           @media (max-width:990px){
             text-align: center;
@@ -1001,6 +1014,10 @@ padding-bottom: 160px;
                    margin-bottom: 8px;
 
                }
+               @media (max-width:330px){
+                flex-basis: 138px;
+
+            }
         }
         &-link{
             color: rgba($gray, 0.5);
@@ -1127,11 +1144,12 @@ padding-bottom: 160px;
         }  
         &__price{
             font-size: 1.5rem;
-            margin-top: 8px}
+            margin-top: 8px;
             @media (max-width:360px) {
                 font-size: 0.85rem;
                 margin-top: 4px;
             }
+        }
    }
 
 
@@ -1164,6 +1182,12 @@ padding-bottom: 160px;
        @media (max-width:440px) {
         font-size: 0.71rem;
         padding: 1rem 3rem;
+    }
+    @media (max-width:330px) {
+        line-height: 1.2;
+        letter-spacing: 0.027rem;
+        font-size: 0.7rem;
+        font-weight: 300;
     }
 
     }
@@ -1265,6 +1289,11 @@ padding-bottom: 160px;
         margin-top: 26px;
         @media (max-width: 1200px){
             text-align: center;
+
+        }
+        @media (max-width: 330px){
+            max-width: 306px;
+            margin: 26px auto;
 
         }
        
@@ -1462,6 +1491,9 @@ padding-bottom: 160px;
         @media (max-width: 440px) {
             font-size: 0.85rem;
         }
+        @media (max-width: 330px) {
+            font-size: 0.7rem;
+        }
         &:hover{
             color: $orange !important;
         }
@@ -1531,3 +1563,79 @@ padding-bottom: 160px;
         }
     }
 }
+.modal-body{
+    &-nav{
+        text-align: center;
+       &__item{
+           list-style-type: none;
+           margin-bottom: 10px;
+       } 
+       &__link{
+        color: $gray;
+        font-size: 1.2rem;
+        border-bottom: 1px solid rgba($gray, 0.5);
+        &:hover{
+            color: $gray;
+            text-decoration: none;
+        }
+
+       }
+    }
+}
+.modal-footer{
+    display: flex;
+    justify-content: space-between;
+    border-top: none;
+    &-tel{
+        text-indent: -9999px;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: transparent;
+        border: 1px solid $gray;
+        background-image: url(../../../img/tel.svg);
+        background-size: 1rem 1.87rem;
+        border-radius: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    &-cart{
+        position: relative;
+        width: 2.5rem;
+        height: 2.5rem;
+        &__button{
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 100%;
+            background-size: 1rem 0.87rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            cursor: pointer;
+            background-color: transparent;
+            border: 1px solid $gray;
+            background-image: url(../../../img/cart-black.svg);
+    
+
+        }
+        &__count{
+            position: absolute;
+            top: 6px;
+            right: 9px;
+            font-size: 0.5rem; 
+            color: $gray;
+
+        }
+    }
+
+}
+.close{
+    background-image: url(../img/close.svg);
+    color: $gray;
+    background-repeat: no-repeat;
+    background-size: 2rem 1.87rem;
+    opacity: 1;
+    margin-top: 2px !important;
+    margin-right: 2px !important;
+    
+
+}
+
